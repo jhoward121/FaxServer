@@ -34,7 +34,7 @@ RUN apt-get update && \
 # Clone and build Reaumur
 RUN git clone https://github.com/bludesign/FaxServer.git
 WORKDIR "/FaxServer"
-RUN vapor build --release --verbose
+RUN sudo vapor build --release --verbose
 
 # Serve
 CMD bash -c ".build/release/App"
